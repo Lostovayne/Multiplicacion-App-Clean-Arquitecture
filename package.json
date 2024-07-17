@@ -3,7 +3,11 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node src/app.ts -b 10",
+    "dev:nodemon": "nodemon",
+    "build": "rimraf ./dist && tsc",
+    "start": "npm run build && node dist/app.js"
   },
   "keywords": [],
   "author": "",
@@ -11,8 +15,13 @@
   "description": "",
   "devDependencies": {
     "@types/node": "^20.14.10",
+    "@types/yargs": "^17.0.32",
+    "nodemon": "^3.1.4",
     "rimraf": "^6.0.1",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.5.3"
+  },
+  "dependencies": {
+    "yargs": "^17.7.2"
   }
 }
