@@ -28,3 +28,5 @@ if (!fs.existsSync("./outputs")) {
 }
 
 fs.writeFileSync(`./outputs/tabla-${base}.txt`, outputMessage);
+
+console.log("File created successfully.");
