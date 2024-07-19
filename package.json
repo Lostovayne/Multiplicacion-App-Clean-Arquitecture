@@ -5,7 +5,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "ts-node src/app.ts -b 10",
-    "dev:nodemon": "nodemon",
+    "dev:nodemon": "nodemon -b  7",
     "build": "rimraf ./dist && tsc",
     "start": "npm run build && node dist/app.js"
   },

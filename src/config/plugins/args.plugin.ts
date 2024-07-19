@@ -21,6 +21,20 @@ export const yarg = yargs(process.argv)
     describe: "Muestra la tabla en consola",
   })
 
+  .option("n", {
+    alias: "name",
+    type: "string",
+    default: "multiplicacion-table",
+    describe: "File name",
+  })
+
+  .option("d", {
+    alias: "destination",
+    type: "string",
+    default: "outputs",
+    describe: "File destination",
+  })
+
   .check((argv, options) => {
     if (argv.b < 1) throw "la base tiene que ser mayor a 0";
     return true;
