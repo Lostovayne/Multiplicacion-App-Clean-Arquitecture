@@ -7,7 +7,7 @@ describe("CreateTableUseCase", () => {
 
     const rows = table.split("\n").length;
 
-    console.log(table);
+    // console.log(table);
     expect(createTable).toBeInstanceOf(CreateTable);
     expect(table).toContain("2 x 1 = 2");
     expect(table).toContain("2 x 10 = 20");
