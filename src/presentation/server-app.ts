@@ -10,14 +10,16 @@ interface RunOptions {
 }
 
 export class ServerApp {
-  static run({ base, limit, showTable ,fileName, fileDestination }: RunOptions) {
+  static run({ base, limit, showTable, fileName, fileDestination }: RunOptions) {
+    console.log("Server Running...");
     const table = new CreateTable().execute({ base, limit });
 
     // Save file
-    const wasCreated = new SaveFile().execute({ fileContent: table , fileName, fileDestination });
-
+    const wasCreated = new SaveFile().execute({ fileContent: table, fileName, fileDestination });
     if (showTable) {
       console.log(table);
     }
+
+    wasCreated ? console.log("File Created Successfully") : console.log("File Creation Failed");
   }
 }
